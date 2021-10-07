@@ -1,0 +1,12 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class App{
+
++{static}makeFile (String path)
++{static}printIfSuccessful (String path, boolean bool)
++{static}main(String[] args)
+
+}
+
+@enduml

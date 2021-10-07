@@ -1,0 +1,13 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class App{
+
++{static}frequencyFinder(String word)
++{static}printStars(int thing)
++{static}printHistogram(int badger, int mushroom, int snake)
++{static}main(String[] args)
+
+}
+
+@enduml

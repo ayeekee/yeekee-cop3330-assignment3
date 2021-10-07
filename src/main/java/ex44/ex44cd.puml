@@ -1,0 +1,11 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class App{
+
++{static}readInfo(String input)
++{static}main(String[] args)
+
+}
+
+@enduml

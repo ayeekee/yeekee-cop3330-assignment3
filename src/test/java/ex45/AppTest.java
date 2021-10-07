@@ -14,7 +14,7 @@ public class AppTest extends TestCase {
                 "                \"For example, \\\"She uses an IDE to write her Java programs\\\" instead of \\\"She\\n\" +\n" +
                 "                \"uses an IDE to write her Java programs\\\".\"";
 
-        assertTrue(path, expected);
+        assertTrue(expected, App.replaceWord(path));
     }
 
     private void assertTrue(String path, String expected) {

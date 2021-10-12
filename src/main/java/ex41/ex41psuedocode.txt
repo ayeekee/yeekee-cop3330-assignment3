@@ -1,0 +1,25 @@
+
+// General steps
+    // first, read in names from input file
+        // use loop to read in names and put them in an arraylist to sort
+    // call function to sort names alphabetically
+        // use collections to sort
+    // create output file to write to
+        // print number of names to output file using the size of the given arraylist
+        // use for loop to iterate through sorted arraylist and print the names to output file
+
+// Main function
+    // create file object to read from and set equal to where the path of the input file is: "src/main/java/ex41/exercise41_input.txt"
+    // create two arraylists--names and sorted--names to store the names from input file and sorted to store the sorted names arraylist
+    // while scanner has next, read in names from input file and add to names arraylist
+    // function call to sortedNames, which sorts the given arraylist
+    // set sorted arraylist equal to above ^
+    // use FileWriter to create an output file exercise41_output.txt
+    // write total number of names using .size() of original arraylist
+    // use a for loop and .size() of arraylist to iterate through the sorted arraylist and print the names to the output file
+
+// sortedNames function
+    // create sorted arraylist to store sorted output
+    // use collections.sort on given names arraylist to sort alphabetically
+    // set sorted arraylist equal to above ^
+    // return sorted arraylist

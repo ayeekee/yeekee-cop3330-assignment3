@@ -36,9 +36,9 @@ public class App {
     }
 
     // printStars prints the asterisk symbol need to make the histogram for the int provided
-    public static void printStars(int thing){
+    public static void printStars(int appears){
         // print stars until needed
-        for(int i = 0; i < thing; i++){
+        for(int i = 0; i < appears; i++){
             System.out.print("*");
         }
         System.out.println();

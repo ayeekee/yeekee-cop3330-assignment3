@@ -6,9 +6,9 @@ import java.io.File;
 
 public class AppTest extends TestCase{
 
-    public void testMakeFile() {
-        File file = new File("src/main/java/ex43/website/");
-        assertTrue(file.exists());
+    public void testMakeDirectory() {
+        String testPath = "src/test/java/ex43/AppTest.java";
+        File test = App.makeDirectory(testPath);
+        assertEquals(true, test.isFile());
     }
-
 }

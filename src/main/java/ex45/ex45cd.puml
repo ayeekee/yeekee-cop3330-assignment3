@@ -1,11 +1,11 @@
 @startuml
 'https://plantuml.com/class-diagram
 
-class App{
-
-+{static}replaceWord(String path)
-+{static}main(String[] args)
-
+package ex45{
+    class App{
+        +{static}replaceWord(String path)
+        +{static}main(String[] args)
+    }
 }
 
 @enduml

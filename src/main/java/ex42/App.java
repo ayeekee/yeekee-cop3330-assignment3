@@ -21,6 +21,21 @@ public class App {
         return size;
     }
 
+    // method printData prints out all the arraylists in correct format
+    public static void printData(ArrayList<String> lNames, ArrayList<String> fNames, ArrayList<String> salaries){
+        // call listSize function
+        int size = listSize(lNames);
+
+        // formatted print statements
+        System.out.printf("%-10s %-10s %s\n", "Last", "First", "Salary");
+        System.out.println("----------------------------");
+
+        // print out formatted input
+        for(int i = 0; i < size; i++){
+            System.out.printf("%-10s %-10s %s\n", lNames.get(i), fNames.get(i), salaries.get(i));
+        }
+    }
+
     // main method
     public static void main( String[] args ) throws FileNotFoundException {
         // create file name object
@@ -55,17 +70,7 @@ public class App {
             salaries.add(temp);
         }
 
-        // call listSize function
-        int size = listSize(lNames);
-
-        // formatted print statements
-        System.out.printf("%-10s %-10s %s\n", "Last", "First", "Salary");
-        System.out.println("----------------------------");
-
-        // print out formatted input
-        for(int i = 0; i < size; i++){
-            System.out.printf("%-10s %-10s %s\n", lNames.get(i), fNames.get(i), salaries.get(i));
-        }
+        printData(lNames, fNames, salaries);
     }
 
 }

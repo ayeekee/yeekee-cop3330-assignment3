@@ -1,0 +1,34 @@
+// General Steps
+    // create path for where the input file is found
+        // create file using this path
+    // create two String variables, one to store the old text and one for the new one
+    // read input file
+    // use while loop to read through the whole input file
+        // read through the file, updating a line variable everytime it gets to the end
+        // use old string to hold everything the reader reads, line by line
+    // replace "utilize" with "use" on the old string, set equal to new string
+    // ask user for output file name
+    // create a file to write to with the name given
+    // write new string to output file
+
+// Main function
+    // create path for the input file "src/main/java/ex45/exercise45_input.txt"
+    // function call to replaceWord, given the path above ^
+        // store returned string in string variable newString
+    // use scanner to read in user input
+        // ask user for a name for the output file
+        // store name in string outputName variable
+    // create output file using base path "src/main/java/ex45/" and outputName
+    // use FileWriter to write newString to output file
+
+// ReplaceWord function
+    // create file from the path name given
+    // create two String variables, one for the old text and one for the new one
+    // use BufferedReader and FileReader together to read the input file
+    // create String line variable to use to read line by line of the text file
+    // while line is not null,
+        // update old variable to contain what was previously in old, plus what's in line variable
+        // update line variable
+    // use .replaceAll to replace "utilize" with "use" on the old string
+        // set new string equal to this
+    // return new string variable

@@ -19,11 +19,8 @@ public class App {
         // create the parser object to read in the info
         JSONParser jsonParser = new JSONParser();
 
-        // create an object to store json file info in
-        Object object = (JSONObject) jsonParser.parse(new FileReader("src/main/java/ex44/exercise44_input.json"));
-
         // create a json object for the values in the file
-        JSONObject jsonObject = (JSONObject)object;
+        JSONObject jsonObject = (JSONObject) jsonParser.parse(new FileReader("src/main/java/ex44/exercise44_input.json"));
 
         // put the info from products in the file into an array
         JSONArray jsonArray = (JSONArray) jsonObject.get("products");
@@ -45,7 +42,7 @@ public class App {
             // check if user input matches a product name; if so, print name, price, and quantity of item
             if(input.equalsIgnoreCase(name)){
                 System.out.println("Name: " + name);
-                System.out.println("Price: $" + item.get("price"));
+                System.out.println("Price: $" + String.format("%.2f", (double) item.get("price")));
                 System.out.println("Quantity: " + item.get("quantity"));
                 res = 1; // update res to show we found the item
             }
@@ -55,7 +52,7 @@ public class App {
             System.out.println("Sorry, that product was not found in our inventory.");
         }
 
-        return res; // return res
+        return res; // return result
     }
 
     // main method

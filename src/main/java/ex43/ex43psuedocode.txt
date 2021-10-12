@@ -1,0 +1,38 @@
+// General Steps
+    // create a string of the base path of where the files should be stored
+    // prompt for the name of the website and get it
+    // create a new String variable to update the new base path with the old base path and the site name
+    // create directory of this new path name
+    // prompt for author name and store in string
+    // create html file, storing it in the new base path
+        // write the author's name and name of the website to the html file
+    // ask if they want and javascript and css folder
+        // if yes, create them, if not, don't
+    // print "created " and then the file/folder path if they were successfully created
+
+// Main function
+    // create base path variable: "src/main/java/ex43/website/"
+    // ask for site name and get it with scanner
+    // create a new path to serve as the base with the name of the title
+    // function call to makeDirectory, pass path just created
+    // get author name with scanner
+    // use new base path to make a new path variable for the html file
+        // use .createNewFile() to make the html file
+        // used BufferedWriter to write the title and author name to the html file
+    // ask if user wants a javascript folder
+        // if yes, function call to makeDirectory to create the folder with a path to a js folder
+    // ask if user wants a css folder
+        // if yes, function call to makeDirectory to create the folder wiht a path to a css folder
+    // function call to printIfSuccessful for the website folder and html file
+    // if user wanted a javascript folder, function call to printIfSuccessful
+    // if user wanted a css folder, function call to printIfSuccessful
+
+// makeDirectory function
+    // create a file from the given String path variable
+    // use .mkdirs() to create the folder, set equal to a bool variable
+    // if bool is false, print error message
+    // return the created file
+
+// printIfSuccessful
+    // check if the given file is a file or directory
+        // if so, print "Created " + given path string

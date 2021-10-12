@@ -1,0 +1,32 @@
+// General Steps
+    // ask user for the product they are looking for, store in a string variable
+    // read info from json file
+    // compare user-given input to names info from the json file
+        // check the given input matches any of the product names
+        // if so, print out info for that product
+        // if not, ask again for the name of the item until they enter a name that's in the json array
+
+// Main function
+    // prompt user for a name of a product, store in a string variable input
+    // create int variable result to store the result of the function call to readInfo
+    // use while loop to prompt customer for a matching item
+        // while result is not equal to 1, ask user for a new product name
+        // update input and function call to readInfo to check if there's a match
+        // continue until the result is 1, meaning a match was found
+
+// readInfo function
+    // use jsonParser to parse the given json file
+    // create a json object of the json file needed to parse using the path of the file: "src/main/java/ex44/exercise44_input.json"
+        // use jsonParser in combination with FileReader to read the info in the json file
+    // create jsonArray of the jsonObject
+    // create int variable res to keep track of the status of whether or not the object was found; default to 0
+    // use while loop and an iterator to go through the jsonArray and check if there's a match with the given user-input
+        // create jsonObject item to keep track of the matching item if there is one
+        // create name string variable to hold the name of the item from the jsonArray
+        // if the match is found,
+            // print item name, price, and quantity
+            // update res variable to 1, meaning a match was found
+        // if res is 0 after iterating through the jsonArray,
+            // print apology message
+    // return res
+

@@ -1,0 +1,41 @@
+// General Steps
+    // create file using the path of the input file
+    // create string variable for the word we're looking for
+    // create int variable to store how many times the word appears
+    // while loop to read through the whole file
+        // use reader to read through word by word
+            // use " " as the delimiter
+        // if the match is found, update count variable
+        // continue until end of file
+    // do this for all three words, store values in three different int variables
+    // print the words we were looking for, from most frequent to least
+        // using a for loop and the int variables, print stars of histogram
+
+// Main function
+    // create three int variables of the words we're looking for to store the result from frequencyFinder function call
+        // set the variable equal to the function call three times
+    // function call to printHistogram
+
+// frequencyFinder function
+    // take in the word we are looking for
+    // create file from path of input file "src/main/java/ex46/exercise46_input.txt"
+    // use FileReader and BufferedReader to read info from file
+    // create int variable count to keep track of how many times the word appears
+    // while line is not null,
+        // read in each word separated by a line
+        // look for match
+        // if the match is found using .equals, update count variable
+        // continue until end of file
+    // return count variable
+
+// printHistogram function
+    // take in ints of the words we're looking for: badger, mushroom, snake
+    // compare to each other to find which occurs the most, middle, and least
+        // print the name of the item when needed
+        // call printStars function when needed
+
+// printStars function
+    // take in an int of the number of times a word appears
+    // use a for loop and that int to print the * of the histogram
+
+

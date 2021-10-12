@@ -1,0 +1,33 @@
+// General Steps
+    // create three separate arraylists for last names, first names, and salaries
+    // use scanner to read the file
+    // use use.Delimiter to parse file
+    // set delimiter to , OR \n
+    // use while loop to read through the file, adding scanned info from input file to the appropriate arraylist
+    // create separate function to get the size of the lists
+        // take in an arraylist of strings
+        // create int variable and set it equal to .size of the given arraylist
+        // return int
+    // create separate void function to print out formatted data
+
+// Main function
+    // create file object to read from and set equal to where the path of the input file is
+    // create three string arraylists, one to store last names, one to store first names, and one to store salaries
+    // create scanner object to read the file with
+    // set delimiter to , OR \\n
+    // use while loop, while scanner has next to read in all info into arraylists
+        // create a temporary string variable to store the info we will read in one by one
+        // set temp equal to the next string read from the file and add temp to respective arraylist
+    // call printData function, which takes in the three arraylists, to print out all the data we just read in formatted correctly
+
+// printData function
+    // create int size variable to store size of one of the arraylists
+    // set int variable equal to function call of listSize
+    // print out formatted headings of "Last", "First", and "Salaries"
+    // print out dashed line
+    // use for loop with size variable to print out the info from lNames, fNames, and salaries arraylists
+
+// listSize function
+    // take in an arraylist
+    // create int size variable, set equal to .size() of given arraylist
+    // return size

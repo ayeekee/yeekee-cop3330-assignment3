@@ -6,6 +6,8 @@ package ex46;
  */
 
 import java.io.*;
+import java.util.HashMap;
+import java.util.*;
 
 public class App {
     // frequencyFinder method finds how many times the given word appears in the input file
@@ -35,78 +37,6 @@ public class App {
         return count; // return the number of times the word appears in the file
     }
 
-    // printStars prints the asterisk symbol need to make the histogram for the int provided
-    public static void printStars(int appears){
-        // print stars until needed
-        for(int i = 0; i < appears; i++){
-            System.out.print("*");
-        }
-        System.out.println();
-    }
-
-    /* printHistogram method takes in the number of times badger, mushroom, and snake appears in the file
-        creates a history based off the data */
-    public static void printHistogram(int badger, int mushroom, int snake){
-        // see which order to print the words from most frequent to least
-        if(badger > snake){ // if badger is greater than snake
-            if(badger > mushroom){ // if badger is greater than mushroom
-                System.out.print("badger: "); // print badger because it's the most frequent
-                printStars(badger);
-
-                if(mushroom > snake){ // mushroom is greater than snake
-                    System.out.print("mushroom: "); // print mushroom
-                    printStars(mushroom);
-
-                    System.out.print("snake: "); // then snake
-                    printStars(snake);
-                } else { // snake is greater than mushroom
-                    System.out.print("snake: ");
-                    printStars(snake);
-
-                    System.out.print("mushroom: ");
-                    printStars(mushroom);
-                }
-            } else { // mushroom is greater than badger
-                System.out.print("mushroom: ");
-                printStars(mushroom);
-
-                System.out.print("badger: ");
-                printStars(badger);
-
-                System.out.print("snake: ");
-                printStars(snake);
-            }
-        } else { // snake is greater than badger
-            if(snake > mushroom){ // if snake is greater than mushroom
-                System.out.print("snake: "); // snake is the most frequent word, so print
-                printStars(snake);
-
-                if(badger > mushroom){ // if badger is greater than mushroom
-                    System.out.print("badger: ");
-                    printStars(badger);
-
-                    System.out.print("mushroom: ");
-                    printStars(mushroom);
-                } else { // badger is less than mushroom
-                    System.out.print("mushroom: ");
-                    printStars(mushroom);
-
-                    System.out.print("badger: ");
-                    printStars(badger);
-                }
-            } else { // mushroom is greater than snake
-                System.out.print("mushroom: ");
-                printStars(mushroom);
-
-                System.out.print("snake: ");
-                printStars(snake);
-
-                System.out.print("badger: ");
-                printStars(badger);
-            }
-        }
-    }
-
     // main method
     public static void main( String[] args ) throws IOException {
 
@@ -115,7 +45,34 @@ public class App {
         int mushroom = frequencyFinder("mushroom");
         int snake = frequencyFinder("snake");
 
-        // method call to print the histogram
-        printHistogram(badger, mushroom, snake);
+        // create hashmap to put values in
+        HashMap<String, Integer> map = new HashMap<>();
+        map.put("badger", badger);
+        map.put("mushroom", mushroom);
+        map.put("snake", snake);
+
+        // use LinkedHashMap to preserve order of sorting
+        LinkedHashMap<String, Integer> sorted = new LinkedHashMap<>();
+
+        // reverse order the map so it's sorted from most frequent to least
+        map.entrySet()
+                .stream()
+                .sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
+                .forEachOrdered(x -> sorted.put(x.getKey(), x.getValue()));
+
+        // print out histogram
+        for (Map.Entry<String, Integer> entry : sorted.entrySet()){
+            // store value in int variable to use for loop
+            int value = entry.getValue();
+
+            // print words from greatest to least frequent
+            System.out.print(entry.getKey() +": ");
+
+            // print stars
+            for(int i = 0; i < value; i++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
     }
 }

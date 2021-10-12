@@ -8,13 +8,20 @@
         // if the match is found, update count variable
         // continue until end of file
     // do this for all three words, store values in three different int variables
-    // print the words we were looking for, from most frequent to least
-        // using a for loop and the int variables, print stars of histogram
+    // store them in a hashmap and sort from greatest to least
+    // print the words we were looking for
+        // using a for loop and the int variables of the value of the hashmap, print stars of histogram
 
 // Main function
     // create three int variables of the words we're looking for to store the result from frequencyFinder function call
         // set the variable equal to the function call three times
-    // function call to printHistogram
+    // store values as values in a hashmap, use the words as keys
+    // create new map variable to store the sorted values and keys in
+    // sort in descending order to print from greatest to least
+    // for the sorted map,
+        // store value in a variable to use for loop to print stars
+        // print key
+        // use a for loop and value variable to print out stars of histogram
 
 // frequencyFinder function
     // take in the word we are looking for
@@ -27,15 +34,5 @@
         // if the match is found using .equals, update count variable
         // continue until end of file
     // return count variable
-
-// printHistogram function
-    // take in ints of the words we're looking for: badger, mushroom, snake
-    // compare to each other to find which occurs the most, middle, and least
-        // print the name of the item when needed
-        // call printStars function when needed
-
-// printStars function
-    // take in an int of the number of times a word appears
-    // use a for loop and that int to print the * of the histogram
 
 
